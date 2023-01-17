@@ -1,19 +1,31 @@
 package sort.util;
 
-import java.util.List;
-
+/**
+ * @author baicai
+ */
 public class Print {
-
-    public static void out(List<Integer> list){
-        System.out.println("打印----start-----");
-        for(Integer i : list){
-            System.out.println(i);
+    public static void out(String preStr, int[] list) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("-------------------------\n");
+        sb.append(preStr);
+        sb.append("\n[");
+        for (int i = 0; i < list.length; i++) {
+            if(i != 0){
+                sb.append(",");
+            }
+            sb.append("\t");
+            sb.append(list[i]);
         }
-        System.out.println("打印----end-----");
-    }
-
-    public static void main(String[] args) {
-        System.out.println(java.util.UUID.randomUUID().toString());
-
+        sb.append("\t]\n[");
+        for (int i = 0; i < list.length; i++) {
+            if(i != 0){
+                sb.append(",");
+            }
+            sb.append("\t");
+            sb.append(i);
+        }
+        sb.append("\t]\n");
+        sb.append("-------------------------");
+        System.out.println(sb.toString());
     }
 }
