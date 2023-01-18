@@ -4,7 +4,7 @@ import sort.util.InitArr;
 import sort.util.Print;
 
 /**
- * 快速排序
+ * 快速排序（分治法算法思想）
  */
 public class Sort6_Quick {
 
